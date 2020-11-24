@@ -18,7 +18,7 @@ public class NonMainThreadSample {
 
         /* Flowable : 메인스레드가 아닌 별도 스레드에서 작동한다
                       호출 이후, Flowable의 로직은 별도 스레드에 맡기고, 메인스레드의 바로 다음 로직을 실행한다.
-        * */
+        */
         Flowable.interval(300L, TimeUnit.MILLISECONDS)
                /* 구독한다 */
                 .subscribe(new ResourceSubscriber<Long>() {
